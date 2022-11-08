@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 import {
   Searchbar,
   SectionHeading,
@@ -18,6 +18,8 @@ import VOLVO from 'src/assets/images/brands/volvo.png';
 import BUGATTI from 'src/assets/images/brands/bugatti.png';
 import HONDA from 'src/assets/images/brands/honda.png';
 import MORE from 'src/assets/images/brands/more.png';
+//Cars
+import BMWCAR from 'src/assets/images/cars/bmw.png';
 import {routes} from 'src/constants';
 
 interface HomeInterface {
@@ -29,8 +31,18 @@ const Home: FC<HomeInterface> = ({navigation}) => {
     <SafeAreaView style={styles.rootContainer}>
       <ScrollView>
         <Searchbar />
-        <SectionHeading title="Special Offers" />
-        <OnSale />
+        <SectionHeading
+          handler={() => navigation.navigate(routes.SPECIAL_OFFERS)}
+          title="Special Offers"
+        />
+        <View style={{marginBottom: 5}}>
+          <OnSale
+            percentage="20%"
+            title="Week Deals!"
+            description={`Get a new car discount, ${'\n'}only valid till this week`}
+            image={BMWCAR}
+          />
+        </View>
         <BrandRow>
           <Brand brand={MERCEDES} label="Mercedes" />
           <Brand brand={TESLA} label="Tesla" />
