@@ -5,4 +5,5 @@ export default {
   HOME: 'Home',
   TOP_DEALS: 'Top Deals',
   SPECIAL_OFFERS: 'Special Offers',
+  BRAND_PAGE: 'Brand Page',
 };

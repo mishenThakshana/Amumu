@@ -6,11 +6,12 @@ import {colors} from 'src/constants';
 interface BrandInterface {
   brand: any;
   label: string;
+  handler?: () => void;
 }
 
-const Brand: FC<BrandInterface> = ({brand, label}) => {
+const Brand: FC<BrandInterface> = ({brand, label, handler}) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={handler}>
       <View style={{marginHorizontal: 20}}>
         <View
           style={{

@@ -44,16 +44,80 @@ const Home: FC<HomeInterface> = ({navigation}) => {
           />
         </View>
         <BrandRow>
-          <Brand brand={MERCEDES} label="Mercedes" />
-          <Brand brand={TESLA} label="Tesla" />
-          <Brand brand={BMW} label="BMW" />
-          <Brand brand={TOYOTA} label="Toyota" />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Mercedes',
+              })
+            }
+            brand={MERCEDES}
+            label="Mercedes"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Tesla',
+              })
+            }
+            brand={TESLA}
+            label="Tesla"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'BMW',
+              })
+            }
+            brand={BMW}
+            label="BMW"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Toyota',
+              })
+            }
+            brand={TOYOTA}
+            label="Toyota"
+          />
         </BrandRow>
         <BrandRow>
-          <Brand brand={VOLVO} label="Volvo" />
-          <Brand brand={BUGATTI} label="Bugatti" />
-          <Brand brand={HONDA} label="Honda" />
-          <Brand brand={MORE} label="More" />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Volvo',
+              })
+            }
+            brand={VOLVO}
+            label="Volvo"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Bugatti',
+              })
+            }
+            brand={BUGATTI}
+            label="Bugatti"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'Honda',
+              })
+            }
+            brand={HONDA}
+            label="Honda"
+          />
+          <Brand
+            handler={() =>
+              navigation.navigate(routes.BRAND_PAGE, {
+                title: 'More',
+              })
+            }
+            brand={MORE}
+            label="More"
+          />
         </BrandRow>
         <SectionHeading
           handler={() => navigation.navigate(routes.TOP_DEALS)}
